@@ -7,6 +7,9 @@
   --color-orange: orangered;
   --color-dark: #2a2a2a;
   --text-color: var(--color-dark);
+  --dark-bg: var(--color-dark);
+  --dark-text-color: white;
+  --shadow: 4px -2px 40px 9px rgba(128, 128, 128, 0.541);
 }
 
 body {
@@ -20,6 +23,7 @@ body {
 .container {
   width: 80%;
   margin: auto;
+  max-width: 1400px;
 }
 
 .joti-one-regular {
@@ -55,10 +59,32 @@ a {
 }
 
 /* <!-- Dark Mode Toggler --> */
+[for="darkMode"] {
+  position: fixed;
+  top: 7rem;
+  left: 3rem;
+}
+
+[for="darkMode"]:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+  transition: all 0.3s;
+}
+
+/* Applying Dark Mode Feature */
+
+#darkMode:checked + .wrapper {
+  --body-bg: var(--dark-bg);
+  color: var(--dark-text-color);
+}
+
+#darkMode {
+  display: none;
+}
 
 /* <!-- NavBar Section --> */
 header {
-  box-shadow: 4px -2px 40px 9px rgba(128, 128, 128, 0.541);
+  box-shadow: var(--shadow);
   position: sticky;
   top: 0;
   background: var(--body-bg);
@@ -101,7 +127,54 @@ header {
   color: var(--color-orange);
   transition: all 0.3s;
 }
+
 /* <!-- Hero Section --> */
+.hero-section {
+  margin-top: 5rem;
+  max-height: 60vh;
+}
+
+.hero {
+  background: var(--color-orange);
+  grid-template-areas: "left right";
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.left {
+  grid-area: left;
+  flex-direction: column;
+  margin-left: 10vw;
+  justify-content: center;
+}
+
+.left span {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.left .tag {
+  font-size: 2.2rem;
+  font-weight: bolder;
+  letter-spacing: 5px;
+}
+
+.left button {
+  background: var(--dark-bg);
+  color: var(--dark-text-color);
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.right {
+  grid-area: right;
+  justify-content: end;
+  align-items: center;
+  margin-top: -7rem;
+}
+
 /* <!-- Banner Section --> */
 /* <!-- Skills Section --> */
 /* <!-- Projects Section --> */
