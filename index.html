@@ -36,20 +36,22 @@
             <div>Subin</div>
             <div class="line">Soft. Engineer</div>
           </div>
+          <label for="hamburgerMenu"><i class="fa-solid fa-bars"></i></label>
+          <input type="checkbox" name="" id="hamburgerMenu" />
           <div class="menu">
             <ul class="flex navigation">
-              <li><a href="">Home</a></li>
-              <li><a href="">Skills</a></li>
-              <li><a href="">Projects</a></li>
-              <li><a href="">About</a></li>
-              <li><a href="">Contact</a></li>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
         </div>
       </header>
 
       <!-- Hero Section -->
-      <section class="hero-section container">
+      <section class="hero-section container" id="hero">
         <div class="grid hero">
           <div class="left flex">
             <div>
@@ -104,7 +106,7 @@
       </section>
 
       <!-- Skills Section -->
-      <div class="skills">
+      <div class="skills" id="skills">
         <h2 class="title"><span>Skills</span></h2>
         <div class="container flex skills-container">
           <div>
@@ -131,7 +133,7 @@
       </div>
 
       <!-- Projects Section -->
-      <section class="projects container">
+      <section class="projects container" id="projects">
         <h2 class="title"><span>My Projects</span></h2>
         <div class="grid projects-container">
           <div class="project-card">
@@ -190,7 +192,7 @@
       </section>
 
       <!-- About Me Section -->
-      <section class="about">
+      <section class="about" id="about">
         <h2 class="title"><span>About Me</span></h2>
         <div class="container flex about-content">
           <div class="flex-center myImg">
@@ -224,7 +226,7 @@
       </section>
 
       <!-- Contact Section -->
-      <section class="contact">
+      <section class="contact" id="contact">
         <h2 class="title"><span>Contact</span></h2>
         <div class="flex social">
           <a href=""><i class="fa-brands fa-linkedin"></i></a
@@ -244,7 +246,33 @@
       </section>
 
       <!-- Footer -->
-      <footer>Coming Soon!</footer>
+      <footer class="flex-center">
+        <div class="top flex">
+          <div class="links">
+            <h3>Links</h3>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="socials">
+            <h3>Social Links</h3>
+            <ul>
+              <li><a href="">LinkedIn</a></li>
+              <li><a href="">Github</a></li>
+              <li><a href="">Facebook</a></li>
+              <li><a href="">Youtube</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom">&copy Copyright All Rights Reserved 2026</div>
+      </footer>
+
+      <a href="#hero" class="goUp flex-center">
+        <i class="fa-solid fa-chevron-up"></i>
+      </a>
     </div>
   </body>
 </html>
